@@ -1,0 +1,61 @@
+body {
+    overflow: hidden;
+}
+
+main.home-body {
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+    position: relative;
+}
+
+main.home-body::before {
+    filter: grayscale(0.5);
+    background: linear-gradient(rgba(20, 46, 174, 0.657), rgba(25, 56, 119, 0.498)), url("/abstract1.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main h2 {
+    font-size: 6rem;
+    z-index: 2;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-left: 6rem;
+    font-family: "Jost", sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px #000000;
+}
+
+.spin {
+    animation: spin 5s ease-in-out infinite both alternate;
+    height: 10rem;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    main.home-body::before {
+        top: 0;
+        background-position: center;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(360deg) translateY(50%);
+    }
+}

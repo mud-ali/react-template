@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(72, 72, 213);
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 {
+    font-family: 'Agdasima', sans-serif;
+    letter-spacing: 0.10rem;
+    color: white;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li {
+    margin: 0 1rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    header ul {
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 3vw;
+    }
+
+    header ul>li, header ul>li>a {
+        box-sizing: border-box;
+        margin: 0.5rem auto;
+        width: 100%;
+        text-align: center;
+    }
+}
